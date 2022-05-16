@@ -7,10 +7,3 @@ Step
 1. Creating the cube environment
 2. Making functions to rotating the cube
 3. Make a function that determine whether a cube is completed for all cases
-
-```py
-
-def Create_Cube():
-  global Cube, CUBE
-  global resister, Resister
-```
