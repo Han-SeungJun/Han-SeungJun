@@ -59,3 +59,9 @@ class mainFrame(wx.Frame):
         f = open('article_text.txt', 'r')
         self.search_result_window.SetValue(f.read())
         f.close()
+
+if __name__ == "__main__":
+    app = wx.App()
+    frame = mainFrame(None)
+    frame.Show()
+    app.MainLoop()
