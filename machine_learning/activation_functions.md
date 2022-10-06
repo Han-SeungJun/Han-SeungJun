@@ -3,9 +3,7 @@
 >
 > Each neural network is used to update weights by calculating prediction errors in the Artificial Intelligence learning phase.
 
-The details are well organized [here](https://ko.wikipedia.org/wiki/%EC%9D%B8%EA%B3%B5_%EC%8B%A0%EA%B2%BD%EB%A7%9D).
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
+The details are well organized [here](https://ko.wikipedia.org/wiki/%EC%9D%B8%EA%B3%B5_%EC%8B%A0%EA%B2%BD%EB%A7%9D)
 
 | __Number__ | __Activation function__ | __Equation__ | __Case__ | __one-dimensional graph__ |
 |:---:|:---:|:---:|:---:|:---:|
