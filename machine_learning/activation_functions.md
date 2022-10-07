@@ -1,19 +1,3 @@
-# Index
-1. [Activation function table](#1-activation-function-table)
-2. [Description to Activation Function](#2-description-to-activation-function)
-    * (1) [Linear function](#1-linear-function)
-    * (2) [Heaviside function](#2-heaviside-function)
-    * (3) [Sign(um) function](#3-sign-function)
-    * (4) [Partial Linear funtion](#4-partial-linear-function)
-    * (5) [Simoid (logistic) function](#5-sigmoid-function)
-    * (6) [Hyperbolic tangent (tanh) function](#6-hyperbolic-tangent-function)
-    * (7) [Softmax function](#7-softmax-function)
-    * (8) [ReLU function (Rectified Linear Unit)](#8-relu-function)
-    * (9) [Leaky ReLU function](#9-leaky-relu-function)
-    * (10) [Exponential Linear Unit (ELU)](#10-elu-function)
-  
----
-
 # 1. Activation function table
 > There are many different types of functions.
 >
@@ -71,11 +55,19 @@ ___
 
   * Inheritance module to need : [`tensorflow.keras.activations.linear`](https://www.tensorflow.org/api_docs/python/tf/keras/activations/linear)
 
-  * Feature : 
+  * Feature : The linear function outputs an input value multiplied by some integer.
+
+  * Advantage : Multiple outputs are possible. That's all. it just linearly changed. so, it won't learned deeply.
+  
+  * Disadvantage : Backpropagation is not available. No matter how deep to the neural layer, there is no change. There is no advantage by using multiple layers. (Learning is a better change.)
 
 ### (2) Heaviside function
 
   * Inheritance module to need : [`from skleran.learn_model import Perceptron`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Perceptron.html)
+
+  * Feature : It is used to linearly distinguish a data set.
+
+  * Advantage : 
 
 ### (3) Sign function
 
@@ -92,3 +84,19 @@ ___
 ### (9) Leaky ReLU function
 
 ### (10) ELU function
+
+---
+
+# Index
+1. [Activation function table](#1-activation-function-table)
+2. [Description to Activation Function](#2-description-to-activation-function)
+    * (1) [Linear function](#1-linear-function)
+    * (2) [Heaviside function](#2-heaviside-function)
+    * (3) [Sign(um) function](#3-sign-function)
+    * (4) [Partial Linear funtion](#4-partial-linear-function)
+    * (5) [Simoid (logistic) function](#5-sigmoid-function)
+    * (6) [Hyperbolic tangent (tanh) function](#6-hyperbolic-tangent-function)
+    * (7) [Softmax function](#7-softmax-function)
+    * (8) [ReLU function (Rectified Linear Unit)](#8-relu-function)
+    * (9) [Leaky ReLU function](#9-leaky-relu-function)
+    * (10) [Exponential Linear Unit (ELU)](#10-elu-function)
