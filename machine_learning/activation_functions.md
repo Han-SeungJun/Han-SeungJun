@@ -5,9 +5,9 @@
 
 The details are well organized [here](https://ko.wikipedia.org/wiki/%EC%9D%B8%EA%B3%B5_%EC%8B%A0%EA%B2%BD%EB%A7%9D)
 
-| __Number__ | __Activation function__ | __Equation__ | __Case__ | __one-dimensional graph__ |
+| __Number__ | [__Activation function__](#description-to-activation-function) | __Equation__ | __Case__ | __one-dimensional graph__ |
 |:---:|:---:|:---:|:---:|:---:|
-| 1 | Linear function | $\phi(z) = z$ | Adalin, Linear Regression | ![download](https://user-images.githubusercontent.com/105290026/194353264-846c6b68-e211-4d72-939c-efc596b0d367.png) |
+| 1 | [Linear function](#1-linear-function) | $\phi(z) = z$ | Adalin, Linear Regression | ![download](https://user-images.githubusercontent.com/105290026/194353264-846c6b68-e211-4d72-939c-efc596b0d367.png) |
 | 2 | Heavyside function | ![image](https://user-images.githubusercontent.com/105290026/194367022-abac654d-4f2b-4143-b68f-6d41bc04b82b.png) | Perceptron type | ![download](https://user-images.githubusercontent.com/105290026/194358187-764341b5-1f00-4b81-9ab8-c6abca693301.png) |
 | 3 | Sign(um) function | ![image](https://user-images.githubusercontent.com/105290026/194367824-a27d3864-7c80-4969-bcd3-6bfc3009d6f9.png) | Perceptron type | ![download](https://user-images.githubusercontent.com/105290026/194367494-9a78639f-ced3-4ffd-874f-218771030ad9.png) |
 | 4 | Partial Linear funtion | ![image](https://user-images.githubusercontent.com/105290026/194373970-9998f132-98fb-4f05-81bf-b4d927344562.png) | Support vector machine | ![download](https://user-images.githubusercontent.com/105290026/194368262-344cb90c-2390-4bcd-90d9-85d2762b0dda.png) |
@@ -33,6 +33,14 @@ $$\phi(z) = \begin{cases}\alpha z\\; (0 < \alpha < 0.01) & (z < 0)\\\ z & (z > 0
 ___
 # Description to Activation Function
 > [Refer to the table above](#activation-function-table)
-#### Consideration about the activation functions used in Neural Network Model how they are worked way and applied case
+#### Consideration about the activation functions used in Neural Network Model how they are worked way and applied case.
+The activation function is divided into three parts.
 
-## 1. Linear function
+* Binary step activation function
+* Linear activation function
+* Non-linear activation function
+
+It mimics a human nerve cell called 'Neuron'. The neuron outputs the intensity of the signal, not the presence or absence of transmission of the signal. It is activated depending on whether the input of each neuron is related to the prediction of the model. Here, the method of determined to the intensity of signal is the 'activation function'.
+
+### 1. Linear function
+
