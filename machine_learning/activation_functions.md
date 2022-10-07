@@ -29,3 +29,10 @@ $$ \phi(x_i) = \frac{e^{x_i}}{\displaystyle\sum_{j=1}^{n}{e^{x_j}}} $$
 
 $$\phi(z) = \begin{cases}\alpha z\\; (0 < \alpha < 0.01) & (z < 0)\\\ z & (z > 0)\\ \end{cases}$$
 -->
+
+___
+# Description to Activation Function
+> [Refer to the table above](#activation-function-table)
+#### Consideration about the activation functions used in Neural Network Model how they are worked way and applied case
+
+## 1. Linear function
