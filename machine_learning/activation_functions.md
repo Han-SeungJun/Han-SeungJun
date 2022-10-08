@@ -1,5 +1,5 @@
 # 1. Activation function table
-> There are many different types of functions.
+> There are many different types of the Activation functions that use in machine learning.
 >
 > Each neural network is used to update weights by calculating prediction errors in the Artificial Intelligence learning phase.
 
@@ -37,8 +37,18 @@ ___
 The activation function is divided into three parts.
 
 * Binary step activation function
+  * Heaviside function
+  * Sign(um) function
 * Linear activation function
+  * Linear function
+  * Partial linear function
 * Non-linear activation function
+  * Sigmoid function
+  * Hyperbolic tangent function
+  * softmax function
+  * ReLU function
+  * ELU function
+  * etc.
 
 It mimics a human nerve cell called 'Neuron'. The neuron outputs the intensity of the signal, not the presence or absence of transmission of the signal. It is activated depending on whether the input of each neuron is related to the prediction of the model. Here, the method of determined to the intensity of signal is the 'activation function'.
 
