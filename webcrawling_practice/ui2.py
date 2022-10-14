@@ -34,28 +34,24 @@ class mainFrame(wx.Frame):
     def onClick(self, event):
         search_text = self.search_keyword_input.GetValue()
         search_result = _search2(search_text)
-        f = open('article_text.txt', 'w')
-        for x in search_result:
-            f.write(x)
-            f.write('\n')
-        f.close()
+        with open('article_text.txt', 'w') as f:
+            for x in search_result:
+                f.write(x)
+                f.write('\n')
         
-        f = open('article_text.txt', 'r')
-        self.search_result_window.SetValue(f.read())
-        f.close()
+        with open('article_text.txt', 'r') as f:
+            self.search_result_window.SetValue(f.read())
 
     def search_enter(self):
         search_text = self.search_keyword_input.GetValue()
         search_result = _search2(search_text)
-        f = open('article_text.txt', 'w')
-        for x in search_result:
-            f.write(x)
-            f.write('\n')
-        f.close()
+        with open('article_text.txt', 'w') as f:
+            for x in search_result:
+                f.write(x)
+                f.write('\n')
         
-        f = open('article_text.txt', 'r')
-        self.search_result_window.SetValue(f.read())
-        f.close()
+        with open('article_text.txt', 'r') as f:
+            self.search_result_window.SetValue(f.read())
         
 if __name__ == '__main__':
     app = wx.App()
