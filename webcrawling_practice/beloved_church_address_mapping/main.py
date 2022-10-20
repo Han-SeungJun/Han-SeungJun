@@ -1,4 +1,4 @@
-# mapping beloved churchs.
+# mapping  and crawling beloved churchs.
 
 import pandas as pd
 import numpy as np
