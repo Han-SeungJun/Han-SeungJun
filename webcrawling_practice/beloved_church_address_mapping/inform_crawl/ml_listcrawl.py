@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-from selenium import webdriver
 
 # The function that appeded a list and crawled informations.
 def inform_list_crawler(_driver):
