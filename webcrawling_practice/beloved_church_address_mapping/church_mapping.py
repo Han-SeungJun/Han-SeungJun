@@ -100,12 +100,12 @@ st.write("###### (※ 핀을 터치하면 주소와 전화번호를 알 수 있�
 st_data = st_folium(my_map, width = 1080)
 
 st.write("---")
-image1 = Image.open('./beloved_church_information_banner.jpg')
+image1 = Image.open('./information_banner/beloved_church_information_banner.jpg')
 st.image(image1, caption='사랑하는 교회 소개')
 
-image2 = image.open('./church_informaion.jpg')
+image2 = image.open('./information_banner/church_informaion.jpg')
 st.image(image2)
-image3 = image.open('./church_informaion2.jpg')
+image3 = image.open('./information_banner/church_informaion2.jpg')
 st.image(image3)
 
 st.sidebar.markdown("관련 링크")
