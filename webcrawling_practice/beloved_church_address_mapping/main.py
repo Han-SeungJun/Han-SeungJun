@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import folium
 import time
+import googlemaps
 from inform_crawl import *
 
 from bs4 import BeautifulSoup
@@ -15,13 +16,14 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import InvalidSessionIdException
 
-API_KEY = ""   # gmaps API 키를 이곳에 넣기. 위도와 경도를 가져오기 위함.
+API_KEY = "" # gmaps API 키를 이곳에 넣기. 위도와 경도를 가져오기 위함.
 
 # 네이버지도에서 사랑하는 교회 주소 가져오기
 chrome_options = webdriver.ChromeOptions()
 # chrome_options.add_argument("headless")
 
-driver = webdriver.Chrome("./driver_manager/chromedriver.exe", options=chrome_options)
+driver = webdriver.Chrome("C:/Projects/Han-SeungJun/webcrawling_practice\
+    /beloved_church_address_mapping/driver_manager.exe", options=chrome_options)
 driver.implicitly_wait(10)
 
 beloved_church_url = "http://www.belovedc.com/"
@@ -140,9 +142,7 @@ address_container_list.pop()
 df_address_data = pd.DataFrame(address_container_list)
 
 # 구글 지도를 이용한 매장의 위치 좌표반환
-import googlemaps
-
-google_maps_key = API_KEY
+google_maps_key = API_KEY # 이곳에 google Cloud API키를 입력
 gmaps = googlemaps.Client(google_maps_key)
 
 df_address_data["위도"] = np.nan
