@@ -1,4 +1,3 @@
-from matplotlib import image
 import streamlit as st
 from streamlit_folium import st_folium
 import folium
@@ -114,11 +113,11 @@ try:
 except FileNotFoundError:
     st.exception("이미지 파일을 불러오는데 실패했습니다.")
 
-st.sidebar.markdown("관련 링크")
-st.sidebar.markdown("[교회 다음카페](https://cafe.daum.net/Bigchurch)")
-st.sidebar.markdown("[교회 홈페이지](http://www.belovedc.com/)")
+st.sidebar.markdown("※ 관련 링크")
+st.sidebar.markdown("[사랑하는 교회 다음카페](https://cafe.daum.net/Bigchurch)")
+st.sidebar.markdown("[교회 공식 홈페이지](http://www.belovedc.com/)")
 st.sidebar.markdown("[교회 공식 블로그](https://blog.naver.com/belovedc)")
 st.sidebar.markdown("[천국의 도서관(서점)](https://www.gfcbook.com:14070/shop/main/index.php)")
-st.sidebar.markdown("[교회 유튜브 채널](https://www.youtube.com/c/gfctvmedia)")
+st.sidebar.markdown("[교회 공식 유튜브 채널](https://www.youtube.com/c/gfctvmedia)")
 st.sidebar.markdown("[개발 소스코드 보기](https://github.com/Han-SeungJun/Han-SeungJun/tree/main/webcrawling_practice/beloved_church_address_mapping/)")
 st.text("개발자 : Han-SeungJun")
