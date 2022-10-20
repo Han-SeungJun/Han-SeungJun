@@ -121,3 +121,4 @@ st.sidebar.markdown("[교회 공식 블로그](https://blog.naver.com/belovedc)"
 st.sidebar.markdown("[천국의 도서관(서점)](https://www.gfcbook.com:14070/shop/main/index.php)")
 st.sidebar.markdown("[교회 유튜브 채널](https://www.youtube.com/c/gfctvmedia)")
 st.sidebar.markdown("[개발 소스코드 보기](https://github.com/Han-SeungJun/Han-SeungJun/tree/main/webcrawling_practice/beloved_church_address_mapping/)")
+st.text("개발자 : Han-SeungJun")
