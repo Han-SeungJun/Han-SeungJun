@@ -21,7 +21,7 @@ API_KEY = ""   # gmaps API 키를 이곳에 넣기. 위도와 경도를 가져�
 chrome_options = webdriver.ChromeOptions()
 # chrome_options.add_argument("headless")
 
-driver = webdriver.Chrome("./셀레니움 실습/chromedriver.exe", options=chrome_options)
+driver = webdriver.Chrome("./driver_manager/chromedriver.exe", options=chrome_options)
 driver.implicitly_wait(10)
 
 beloved_church_url = "http://www.belovedc.com/"
