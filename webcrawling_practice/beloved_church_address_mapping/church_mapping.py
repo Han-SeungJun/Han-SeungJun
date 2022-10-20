@@ -19,13 +19,13 @@ st.write("###### ")
 st.write("###### (※ 버까시 및 아프리카 지교회의 위치 및 주소는 정확하지 않습니다.)")    
 
 # 사랑하는 교회 주소 데이터프레임 불러오기
-df_address_data_csv = pd.read_csv("./beloved_church_maps.csv", encoding='utf-8', index_col = 0)
+df_address_data_csv = pd.read_csv("C:\\Projects\\Han-SeungJun\\webcrawling_practice\\beloved_church_address_mapping\\beloved_church_maps.csv", encoding='utf-8', index_col = 0)
 df_address_data_csv.drop(['위도', '경도'], axis = 1, inplace = True)
 
 st.write("---")
 st.write("#### 사랑하는 교회 리스트 보기")
 df_address_data_csv
-df_address_data_csv = pd.read_csv("./beloved_church_maps.csv", encoding='utf-8', index_col = 0)
+df_address_data_csv = pd.read_csv("C:\\Projects\\Han-SeungJun\\webcrawling_practice\\beloved_church_address_mapping\\beloved_church_maps.csv", encoding='utf-8', index_col = 0)
 
 # center(seoul_church_address) on render Folium map in streamlit
 seoul_center = [df_address_data_csv["위도"][0], df_address_data_csv["경도"][0]]
@@ -100,12 +100,12 @@ st.write("###### (※ 핀을 터치하면 주소와 전화번호를 알 수 있�
 st_data = st_folium(my_map, width = 1080)
 
 st.write("---")
-image1 = Image.open('./information_banner/beloved_church_information_banner.jpg')
+image1 = Image.open('C:\\Projects\\Han-SeungJun\\webcrawling_practice\\beloved_church_address_mapping\\information_banner\\beloved_church_information_banner.jpg')
 st.image(image1, caption='사랑하는 교회 소개')
 
-image2 = image.open('./information_banner/church_informaion.jpg')
+image2 = Image.open('C:\\Projects\\Han-SeungJun\\webcrawling_practice\\beloved_church_address_mapping\\information_banner\\church_informaion.jpg')
 st.image(image2)
-image3 = image.open('./information_banner/church_informaion2.jpg')
+image3 = Image.open('C:\\Projects\\Han-SeungJun\\webcrawling_practice\\beloved_church_address_mapping\\information_banner\\church_informaion2.jpg')
 st.image(image3)
 
 st.sidebar.markdown("관련 링크")
