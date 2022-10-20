@@ -103,10 +103,16 @@ st.write("---")
 image1 = Image.open('C:\\Projects\\Han-SeungJun\\webcrawling_practice\\beloved_church_address_mapping\\information_banner\\beloved_church_information_banner.jpg')
 st.image(image1, caption='사랑하는 교회 소개')
 
-image2 = Image.open('C:\\Projects\\Han-SeungJun\\webcrawling_practice\\beloved_church_address_mapping\\information_banner\\church_informaion.jpg')
-st.image(image2)
-image3 = Image.open('C:\\Projects\\Han-SeungJun\\webcrawling_practice\\beloved_church_address_mapping\\information_banner\\church_informaion2.jpg')
-st.image(image3)
+try:
+    image2 = Image.open('C:\\Projects\\Han-SeungJun\\webcrawling_practice\\beloved_church_address_mapping\\information_banner\\church_informaion.jpg')
+    st.image(image2)
+except FileNotFoundError:
+    st.exception("이미지 파일을 불러오는데 실패했습니다.")
+try:
+    image3 = Image.open('C:\\Projects\\Han-SeungJun\\webcrawling_practice\\beloved_church_address_mapping\\information_banner\\church_informaion2.jpg')
+    st.image(image3)
+except FileNotFoundError:
+    st.exception("이미지 파일을 불러오는데 실패했습니다.")
 
 st.sidebar.markdown("관련 링크")
 st.sidebar.markdown("[교회 다음카페](https://cafe.daum.net/Bigchurch)")
