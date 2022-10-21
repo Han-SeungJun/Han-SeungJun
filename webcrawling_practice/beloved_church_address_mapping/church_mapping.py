@@ -22,13 +22,13 @@ st.write("###### ")
 st.write("###### (※ 버까시 및 아프리카 지교회의 위치 및 주소는 정확하지 않습니다.)")    
 
 # 사랑하는 교회 주소 데이터프레임 불러오기
-df_address_data_csv = pd.read_csv(r"C:\Projects\Han-SeungJun\webcrawling_practice\beloved_church_address_mapping\beloved_church_maps.csv", encoding='utf-8', index_col = 0)
+df_address_data_csv = pd.read_csv(r"app\han-seungjun\webcrawling_practice\beloved_church_address_mapping\beloved_church_maps.csv", encoding='utf-8', index_col = 0)
 df_address_data_csv.drop(['위도', '경도'], axis = 1, inplace = True)
 
 st.write("---")
 st.write("#### 사랑하는 교회 리스트 보기")
 df_address_data_csv
-df_address_data_csv = pd.read_csv(r"C:\Projects\Han-SeungJun\webcrawling_practice\beloved_church_address_mapping\beloved_church_maps.csv", encoding='utf-8', index_col = 0)
+df_address_data_csv = pd.read_csv(r"app\han-seungjun\webcrawling_practice\beloved_church_address_mapping\beloved_church_maps.csv", encoding='utf-8', index_col = 0)
 
 # center(seoul_church_address) on render Folium map in streamlit
 seoul_center = [df_address_data_csv["위도"][0], df_address_data_csv["경도"][0]]
