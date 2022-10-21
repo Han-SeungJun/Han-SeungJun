@@ -1,9 +1,18 @@
+from symbol import encoding_decl
 import streamlit as st
 from streamlit_folium import st_folium
 import folium
 import pandas as pd
 import numpy as np
 from PIL import Image
+import csv
+
+path = "C:/Projects/Han-SeungJun/webcrawling_practice/beloved_church_address_mapping/"
+csv_file = "beloved_church_maps.csv"
+img_path = path + "informaion_banner/"
+img_file1 = "beloved_church_information_banner.jpg"
+img_file2 = "church_information.jpg"
+img_file3 = "church_information2.jpg"
 
 # 페이지 기본설정
 st.set_page_config(
@@ -18,16 +27,29 @@ st.write("###### ")
 st.write("###### (※ 버까시 및 아프리카 지교회의 위치 및 주소는 정확하지 않습니다.)")    
 
 # 사랑하는 교회 주소 데이터프레임 불러오기
-df_address_data_csv = pd.read_csv("https://github.com/Han-SeungJun/Han-SeungJun/blob/main/webcrawling_practice/beloved_church_address_mapping/beloved_church_maps.csv", encoding='utf-8', index_col = 0)
+def read_dataframe():
+    csv_list = []
+    with open(path + csv_file, 'rt', encoding='utf-8') as f:
+        read_csv = csv.reader(f)
+        
+        for line in read_csv:
+            csv_list.append(line)
+
+        df = pd.DataFrame(csv_list)
+        df=df.rename(columns=df.iloc[0])
+        df=df.drop(df.index[0])
+    return df
+
+df_address_data_csv = read_dataframe()
 df_address_data_csv.drop(['위도', '경도'], axis = 1, inplace = True)
 
 st.write("---")
 st.write("#### 사랑하는 교회 리스트 보기")
 df_address_data_csv
-df_address_data_csv = pd.read_csv("https://github.com/Han-SeungJun/Han-SeungJun/blob/main/webcrawling_practice/beloved_church_address_mapping/beloved_church_maps.csv", encoding='utf-8', index_col = 0)
+df_address_data_csv = read_dataframe()
 
 # center(seoul_church_address) on render Folium map in streamlit
-seoul_center = [df_address_data_csv["위도"][0], df_address_data_csv["경도"][0]]
+seoul_center = [df_address_data_csv["위도"][1], df_address_data_csv["경도"][1]]
 my_map = folium.Map(location = seoul_center, zoom_start = 16)
 
 # legend_txt = '<span style="color: {col};">{txt}</span>'
@@ -99,18 +121,16 @@ st.write("###### (※ 핀을 터치하면 주소와 전화번호를 알 수 있�
 st_data = st_folium(my_map, width = 1080)
 
 st.write("---")
-image1 = Image.open('https://github.com/Han-SeungJun/Han-SeungJun/blob/main/webcrawling_practice/beloved_church_address_mapping/information_banner/beloved_church_information_banner.jpg')
-st.image(image1, caption='사랑하는 교회 소개')
+try:
+    image1 = Image.open(img_path + img_file1)
+    st.image(image1)
 
-try:
-    image2 = Image.open('https://github.com/Han-SeungJun/Han-SeungJun/blob/main/webcrawling_practice/beloved_church_address_mapping/information_banner/church_information.jpg')
+    image2 = Image.open(img_path + img_file2)
     st.image(image2)
-except FileNotFoundError:
-    st.exception("이미지 파일을 불러오는데 실패했습니다.")
-try:
-    image3 = Image.open('https://github.com/Han-SeungJun/Han-SeungJun/blob/main/webcrawling_practice/beloved_church_address_mapping/information_banner/church_information2.jpg')
-    st.image(image3)
-except FileNotFoundError:
+
+    image3 = Image.open(img_path + img_file3)
+    st.image(image3, caption='사랑하는 교회 소개')
+except FileNotFoundError as e:
     st.exception("이미지 파일을 불러오는데 실패했습니다.")
 
 st.sidebar.markdown("※ 관련 링크")
