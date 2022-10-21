@@ -4,6 +4,9 @@ import folium
 import pandas as pd
 import numpy as np
 from PIL import Image
+import os
+
+path = os.getcwd()
 
 # 페이지 기본설정
 st.set_page_config(
@@ -14,6 +17,7 @@ st.set_page_config(
 
 st.header("사랑하는 교회 위치⛪")
 st.subheader("서울, 국내 및 해외 지교회 위치를 알 수 있습니다.")
+st.write(path)
 st.write("###### ")
 st.write("###### (※ 버까시 및 아프리카 지교회의 위치 및 주소는 정확하지 않습니다.)")    
 
