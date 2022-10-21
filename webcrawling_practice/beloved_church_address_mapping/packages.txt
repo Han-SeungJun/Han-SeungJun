@@ -1,4 +1,5 @@
 streamlit_folium-dev
+streamlit-dev
 folium-dev
 pandas-dev
 numpy-dev
