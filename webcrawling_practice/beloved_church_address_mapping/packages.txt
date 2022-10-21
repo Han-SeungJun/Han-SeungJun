@@ -6,4 +6,5 @@ googlemaps-dev
 bs4-dev
 tqdm-dev
 selenium-dev
+branca-dev
 
