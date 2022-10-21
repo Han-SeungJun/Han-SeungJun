@@ -1,0 +1,11 @@
+streamlit_folium-dev
+streamlit-dev
+folium-dev
+pandas-dev
+numpy-dev
+googlemaps-dev
+bs4-dev
+tqdm-dev
+selenium-dev
+branca-dev
+
