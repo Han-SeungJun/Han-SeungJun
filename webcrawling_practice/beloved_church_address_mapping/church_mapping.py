@@ -4,7 +4,6 @@ import folium
 import pandas as pd
 import numpy as np
 from PIL import Image
-import os
 
 # 페이지 기본설정
 st.set_page_config(
@@ -15,18 +14,17 @@ st.set_page_config(
 
 st.header("사랑하는 교회 위치⛪")
 st.subheader("서울, 국내 및 해외 지교회 위치를 알 수 있습니다.")
-st.write(path)
 st.write("###### ")
 st.write("###### (※ 버까시 및 아프리카 지교회의 위치 및 주소는 정확하지 않습니다.)")    
 
 # 사랑하는 교회 주소 데이터프레임 불러오기
-df_address_data_csv = pd.read_csv(r"C:\Projects\Han-SeungJun\webcrawling_practice\beloved_church_address_mapping\beloved_church_maps.csv", encoding='utf-8', index_col = 0)
+df_address_data_csv = pd.read_csv("https://github.com/Han-SeungJun/Han-SeungJun/blob/main/webcrawling_practice/beloved_church_address_mapping/beloved_church_maps.csv", encoding='utf-8', index_col = 0)
 df_address_data_csv.drop(['위도', '경도'], axis = 1, inplace = True)
 
 st.write("---")
 st.write("#### 사랑하는 교회 리스트 보기")
 df_address_data_csv
-df_address_data_csv = pd.read_csv(r"C:\Projects\Han-SeungJun\webcrawling_practice\beloved_church_address_mapping\beloved_church_maps.csv", encoding='utf-8', index_col = 0)
+df_address_data_csv = pd.read_csv("https://github.com/Han-SeungJun/Han-SeungJun/blob/main/webcrawling_practice/beloved_church_address_mapping/beloved_church_maps.csv", encoding='utf-8', index_col = 0)
 
 # center(seoul_church_address) on render Folium map in streamlit
 seoul_center = [df_address_data_csv["위도"][0], df_address_data_csv["경도"][0]]
@@ -101,16 +99,16 @@ st.write("###### (※ 핀을 터치하면 주소와 전화번호를 알 수 있�
 st_data = st_folium(my_map, width = 1080)
 
 st.write("---")
-image1 = Image.open(r'C:\Projects\Han-SeungJun\webcrawling_practice\beloved_church_address_mapping\information_banner\beloved_church_information_banner.jpg')
+image1 = Image.open('https://github.com/Han-SeungJun/Han-SeungJun/blob/main/webcrawling_practice/beloved_church_address_mapping/information_banner/beloved_church_information_banner.jpg')
 st.image(image1, caption='사랑하는 교회 소개')
 
 try:
-    image2 = Image.open(r'C:\Projects\Han-SeungJun\webcrawling_practice\beloved_church_address_mapping\information_banner\church_informaion.jpg')
+    image2 = Image.open('https://github.com/Han-SeungJun/Han-SeungJun/blob/main/webcrawling_practice/beloved_church_address_mapping/information_banner/church_information.jpg')
     st.image(image2)
 except FileNotFoundError:
     st.exception("이미지 파일을 불러오는데 실패했습니다.")
 try:
-    image3 = Image.open(r'C:\Projects\Han-SeungJun\webcrawling_practice\beloved_church_address_mapping\information_banner\church_informaion2.jpg')
+    image3 = Image.open('https://github.com/Han-SeungJun/Han-SeungJun/blob/main/webcrawling_practice/beloved_church_address_mapping/information_banner/church_information2.jpg')
     st.image(image3)
 except FileNotFoundError:
     st.exception("이미지 파일을 불러오는데 실패했습니다.")
