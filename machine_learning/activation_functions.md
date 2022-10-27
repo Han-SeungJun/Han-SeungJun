@@ -81,19 +81,83 @@ ___
 
 ### (3) Sign function
 
+  * Inheritance module to need : 
+
+  * Feature : 
+
+  * Advantage : 
+
+  * Disadvantage : 
+
 ### (4) Partial linear function
+
+  * Inheritance module to need : 
+
+  * Feature : 
+
+  * Advantage : 
+
+  * Disadvantage : 
 
 ### (5) Sigmoid function
 
+  * Inheritance module to need : [`tensorflow.keras.activations.sigmoid`](https://www.tensorflow.org/api_docs/python/tf/keras/activations/sigmoid)
+
+  * Feature : Output value is among 0 and 1. It is used to the Binary classification problem often. Its maximum value in differential function is 1/4 at x = 0. If it increases above a certain value, it converges to zero. So, it can be caused problem in Backpropagation step.
+
+  * Advantage : By using this function, we can benefit from the multi-layer perceptron problem.
+
+  * Disdvantage : The output value is always positive. So, its learning speed is too slow. And there is problem that occurs to decrease the output value in backpropagation step. (the slow learning speed is called 'Vanishing gradient' problem.)
+
 ### (6) Hyperbolic tangent function
+
+  * Inheritance module to need : [`tensorflow.keras.activations.tanh`](https://www.tensorflow.org/api_docs/python/tf/keras/activations/tanh)
+
+  * Feature : A function with complementary functions of sigmoid. Unlike the sigmoid, this value is negative and the median is 0. Compared to sigmoid, the maximum value of the differential function is four times larger.
+
+  * Advantage : It solved 'non-zero centered problem' a disadvantage of sigmoid. In addition, there is no biased movement because the median value is 0. And learning efficiency is better than Sigmoid. It solves the vanishing gradient problem in sigmoid function.
+
+  * Disadvantage : The vanishing gradient problem has not been completely solved(The chronic problem of the activation functions).
 
 ### (7) Softmax function
 
+  * Inheritance module to need : [`tensorflow.keras.activations.softmax`](https://www.tensorflow.org/api_docs/python/tf/keras/activations/softmax)
+
+  * Feature : It outputs a value between 0 and 1. It is used for 'Multi-classification Problem' and 'Multi-Logistic Regression'. If it adds all of the output of the node, you get 1. All input values are changed to exponential values in order to normalize each element.
+
+  * Advantage : There is an effect of making the weight larger because all input values are changed to exponential values. It can classify more classes.
+
+  * Disadvantage : It occurs **overflow problem** due to exponential operations.
+
 ### (8) ReLU function
+
+  * Inheritance module to need : 
+
+  * Feature : 
+
+  * Advantage : 
+
+  * Disadvantage : 
 
 ### (9) Leaky ReLU function
 
+  * Inheritance module to need : 
+
+  * Feature : 
+
+  * Advantage : 
+
+  * Disadvantage : 
+
 ### (10) ELU function
+
+  * Inheritance module to need : 
+
+  * Feature : 
+
+  * Advantage : 
+
+  * Disadvantage : 
 
 ---
 
