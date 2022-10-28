@@ -7,9 +7,9 @@ import numpy as np
 from PIL import Image
 # import csv
 
-path = "C:/Projects/Han-SeungJun/webcrawling_practice/beloved_church_address_mapping/"
+path = "https://github.com/Han-SeungJun/Han-SeungJun/blob/main/webcrawling_practice/beloved_church_address_mapping/"
 csv_file = "beloved_church_maps.csv"
-img_path = path + "informaion_banner/"
+img_path = "https://github.com/Han-SeungJun/Han-SeungJun/tree/main/webcrawling_practice/beloved_church_address_mapping/information_banner"
 img_file1 = "beloved_church_information_banner.jpg"
 img_file2 = "church_information.jpg"
 img_file3 = "church_information2.jpg"
