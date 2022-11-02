@@ -75,29 +75,31 @@ ___
 
   * Inheritance module to need : [`from skleran.learn_model import Perceptron`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Perceptron.html)
 
-  * Feature : It is used to linearly distinguish a data set.
+  * Feature : It is used to linearly distinguish a data set. If the input value exceeds the boundary value, 1 is output, and if not, 0 is output.
 
-  * Advantage : 
+  * Advantage : It is the most basic activation function.
+
+  * Disadvantage : It is not suitable for use as an activation function because it is an undifferentiable function. So, it is impossible to machine learning. And very different from biological neurons
 
 ### (3) Sign function
 
-  * Inheritance module to need : 
+  * Inheritance module to need : [`tensorflow.math.sign`](https://www.tensorflow.org/api_docs/python/tf/math/sign)
 
-  * Feature : 
+  * Feature : It is used to linearly distinguish a data set. If the input value exceeds the boundary value, 1 is output, and if not, -1 is output.
 
-  * Advantage : 
+  * Advantage : Learning speed is fast better than the Heaviside function because some output is -1 not 0. It is undifferentiable function.
 
-  * Disadvantage : 
+  * Disadvantage : It is possible to simple machine learning, but it is impossible about from complex problem. So, it is impossible backpropagation.
 
 ### (4) Partial linear function
 
-  * Inheritance module to need : 
+  * Inheritance module to need : [`tensorflow.function`](https://www.tensorflow.org/api_docs/python/tf/function) (The details of the function must be defined directly.)
 
-  * Feature : 
+  * Feature : A function complemented to enable backpropagation. It complements function in order to enable backpropagation. It is also used to improve and restore video image quality.
 
-  * Advantage : 
+  * Advantage : The probability of buffer flooding has been reduced. It possible to backpropagation. 
 
-  * Disadvantage : 
+  * Disadvantage : It is inefficient about small input values. Learning complexity is simple than a non-linear activation function. therefore, it unfits to solve a complex problem.
 
 ### (5) Sigmoid function
 
