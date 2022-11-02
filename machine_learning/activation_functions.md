@@ -131,33 +131,33 @@ ___
 
 ### (8) ReLU function
 
-  * Inheritance module to need : 
+  * Inheritance module to need : [`tensorflow.keras.activations.relu`](https://www.tensorflow.org/api_docs/python/tf/keras/activations/relu)
 
-  * Feature : 
+  * Feature : It uses often in DNN. If input value is positive, returned itself and if negative, returned 0.
 
-  * Advantage : 
+  * Advantage : It is a good non-linear function in order to learned complex problem. It is fast a learning speed. It has fast learning speed and weight update speed because it a low amount of computation.
 
-  * Disadvantage : 
+  * Disadvantage : If the input value is negative, there are no more update to weights. (Dead neuron phenomenon, Dying ReLU phnomenon)
 
 ### (9) Leaky ReLU function
 
-  * Inheritance module to need : 
+  * Inheritance module to need : [`tensorflow.keras.layers.LeakyReLU`](https://www.tensorflow.org/api_docs/python/tf/keras/layers/LeakyReLU)
 
-  * Feature : 
+  * Feature : The function that in order to solve for 'Dying ReLU phenomenon'. Returns the same value if the input value is positive. However, if negative, returns a value (input value times about 0.01) lower than the input value.
 
-  * Advantage : 
+  * Advantage : If input the negative, it still updates weights unlike ReLU function. It resolves the 'Dying neuron phenomenon' on some levels.
 
-  * Disadvantage : 
+  * Disadvantage : It still not completely resolved the phenomenon.
 
 ### (10) ELU function
 
-  * Inheritance module to need : 
+  * Inheritance module to need : [`tensorflow.keras.activations.elu`](https://www.tensorflow.org/api_docs/python/tf/keras/activations/elu)
 
-  * Feature : 
+  * Feature : Returns the same value if the input value is positive. However, if negative, returns a value that low value. Returns a value converging to certain value as it becomes smaller.
 
-  * Advantage : 
+  * Advantage : The cost converges faster to zero. Derive more accurate results. It outperformed all other ReLU variants.
 
-  * Disadvantage : 
+  * Disadvantage : It is slower to calculate than ReLU and its variants.
 
 ---
 
